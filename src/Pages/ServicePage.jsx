@@ -8,12 +8,12 @@ import { MdOutlineCleaningServices } from "react-icons/md";
 
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center p-8">
+    <div id="servicios" className="min-h-screen bg-white flex flex-col items-center p-8">
       <div className="flex flex-col items-start w-full sm:w-auto">
 
         <div className="w-full sm:w-96 mb-8">
           <p className="text-5xl mb-6">Servicios</p>
-          <div className="w-full h-1 bg-gradient-to-r from-red-700 via-red-500 to-red-700 rounded-full mb-16"></div>
+          <div className="w-full h-1 bg-gradient-to-r from-red-600 via-red-400 to-red-600 rounded-full mb-16"></div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-24 gap-x-16 justify-items-start">
@@ -22,7 +22,6 @@ export default function ServicePage() {
           <ServiceCard icon={PiWallDuotone} text="Enduidos" description="Aplicación de enduido para alisar paredes y prepararlas para pintar" />
           <ServiceCard icon={FaSheetPlastic} text="Fascerit" description="Revestimiento plástico texturado que protege y decora superficies exteriores" />
           <ServiceCard icon={GiCrystalShine} text="Lustres" description="Acabado brillante que realza superficies interiores" />
-          <ServiceCard icon={FaPaintRoller} text="Empapelados" description="Colocación profesional de papel tapiz decorativo en interiores" />
           <ServiceCard icon={GiWoodCabin} text="Laqueados de puertas, marcos y contramarcos" description="Aplicación de laca para lograr un acabado liso, duradero y elegante, protegiendo la madera del uso y la humedad " />
           <ServiceCard icon={MdOutlineCleaningServices} text="Limpieza profunda de madera y barnices" description="Eliminación de suciedad, manchas y restos de productos para restaurar el brillar y la textura original de la madera tratada" />
           <ServiceCard icon={LuDoorOpen} text="Esmaltados de puertas y ventanas" description="Pintura con esmalte sintético o al agua para proteger y renovar superficies, con terminación mate, satinada o brillante" />
