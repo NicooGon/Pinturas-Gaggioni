@@ -1,4 +1,5 @@
 import logo from "../Images/LOGO.PNG";
+import logo2 from "../Images/LOGO2.PNG";
 
 export default function TopBar() {
   return (

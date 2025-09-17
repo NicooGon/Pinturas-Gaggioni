@@ -1,8 +1,13 @@
-export default function ServiceCard({ icon, text }) {
+export default function ServiceCard({ icon: Icon, text, description }) {
   return (
-    <div className="flex items-start gap-4 w-80">
-      <img src={icon} alt={text} className="h-18 w-18" />
-      <p className="text-xl text-black font-karla">{text}</p>
+    <div className="flex items-start gap-4 w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
+      {/* Ícono de React */}
+      <Icon className="h-20 w-20 shrink-0 text-yellow-600" />
+
+      <div>
+        <p className="text-xl font-semibold">{text}</p>
+        <p className="font-medium">{description}</p>
+      </div>
     </div>
   );
 }
