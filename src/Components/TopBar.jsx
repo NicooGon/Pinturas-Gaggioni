@@ -2,7 +2,7 @@ import logo from "../Images/LOGO.PNG";
 
 export default function TopBar() {
   return (
-    <nav className="w-screen bg-black px-4 md:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
+    <div className="w-screen bg-black px-4 md:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
       
       <div className="flex items-center gap-4 mb-4 md:mb-0">
         <img src={logo} alt="Logo Pinturas Gaggioni" className="h-12" />
@@ -18,6 +18,6 @@ export default function TopBar() {
         <a href="#contactanos" className="hover:text-gray-300">Contáctanos</a>
       </div>
       
-    </nav>
+    </div>
   );
 }

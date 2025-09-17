@@ -1,14 +1,16 @@
 import './App.css'
 import TopBar from './Components/TopBar'
+import ServicePage from './Pages/ServicePage'
 
 function App() {
-
   return (
-    <div>
-      <TopBar>
+    <div className="App">
+      <TopBar />
 
-      </TopBar>
+      <div >
+        <ServicePage></ServicePage>
       </div>
+    </div>
   )
 }
 
