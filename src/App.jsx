@@ -1,4 +1,4 @@
-import './App.css'
+import CarouselImg from './components/carouselimg'
 import TopBar from './Components/TopBar'
 
 function App() {
@@ -8,7 +8,8 @@ function App() {
       <TopBar>
 
       </TopBar>
-      </div>
+      <CarouselImg></CarouselImg>
+    </div>
   )
 }
 
