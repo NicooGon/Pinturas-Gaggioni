@@ -17,7 +17,7 @@ export default function ServicePage() {
     >
       <div className="flex flex-col items-start w-full sm:w-auto">
         <div className="w-full sm:w-96 mb-8">
-          <p className="text-5xl mb-6">Servicios</p>
+          <p className="text-5xl font-montserrat mb-6">Servicios</p>
           <div className="w-full h-0.5 bg-gradient-to-r from-red-600 via-red-400 to-red-600 rounded-full mb-16"></div>
         </div>
 
