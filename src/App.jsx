@@ -5,23 +5,14 @@ import ServicePage from './Pages/ServicePage'
 
 function App() {
   return (
-    <div> 
+    <div className='min-h-screen'>
       <TopBar />
-<<<<<<< HEAD
-
-      <ServicePage />
-      <ContactPage />
-=======
-      <CarouselImg>
-        
-      </CarouselImg>
-      <div >
-        <ServicePage></ServicePage>
+    <div className="pt-54 md:pt-20 lg:pt-20">
+        <ServicePage />
+        <ContactPage />
       </div>
->>>>>>> 94a67e2f19f2e0c46ffe5cba2ac612fd4894d433
     </div>
   );
 }
 
-
-export default App
+export default App;

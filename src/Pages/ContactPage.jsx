@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <div
     id="contactanos"
-      className="min-h-screen flex flex-col items-center justify-center p-8 bg-cover bg-center"
+      className="lg:min-h-[calc(100vh-80px)] flex flex-col items-center justify-center p-8 bg-cover bg-center scroll-mt-54 sm:scroll-mt-54 md:scroll-mt-18 lg:scroll-mt-20"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-24 gap-x-16 w-full max-w-5xl bg-gray-100/70 p-8 rounded-lg">

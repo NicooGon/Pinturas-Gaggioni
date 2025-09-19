@@ -5,7 +5,7 @@ export default function TopBar() {
   return (
     <div className="fixed w-screen bg-black px-4 md:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
       
-      <div className="flex items-center gap-4 mb-4 md:mb-0">
+      <div className="flex items-center gap-4 mb-4 md:mb-0" >
         <img src={logo} alt="Logo Pinturas Gaggioni" className="h-12 text-yellow-200" />
         <a href="/" className="text-3xl font-bold text-yellow-500 font-quicksand">
           PINTURAS GAGGIONI
