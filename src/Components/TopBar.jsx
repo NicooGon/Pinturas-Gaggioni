@@ -3,7 +3,7 @@ import logo2 from "../Images/LOGO2.PNG";
 
 export default function TopBar() {
   return (
-    <div className="fixed w-screen bg-black px-4 md:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
+    <div className="sticky top-0 z-20 w-screen bg-black px-4 md:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
       
       <div className="flex items-center gap-4 mb-4 md:mb-0" >
         <img src={logo} alt="Logo Pinturas Gaggioni" className="h-12 text-yellow-200" />

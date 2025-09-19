@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='min-h-screen'>
       <TopBar />
-    <div className="pt-54 md:pt-20 lg:pt-20">
+      <div className="pt-54 md:pt-20 lg:pt-20">
         <ServicePage />
         <ContactPage />
       </div>
