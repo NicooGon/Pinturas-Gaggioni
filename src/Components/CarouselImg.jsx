@@ -47,7 +47,7 @@ export default function CarouselImg() {
                   style={{ backgroundImage: `url(${item.pic})` }}
                 >
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-[#c75353] transition-colors duration-400"></div>
-                  <div className="relative flex flex-gcol p-4 gap-2 items-center justify-center group-hover:opacity-0 group-hover:translate-y-2 transition-all duration-300">
+                  <div className="relative flex flex-col p-4 gap-2 items-center justify-center group-hover:opacity-0 group-hover:translate-y-2 transition-all duration-300">
                     <div className="text-center">{item.icon}</div>
                     <div className="text-center">
                       <label className="text-xl sm:text-2xl font-semibold text-white font-roboto">

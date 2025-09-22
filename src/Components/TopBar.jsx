@@ -1,15 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../Images/LOGO.PNG";
+import { motion } from "framer-motion";
 
 export default function TopBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50){
+        setScrolled(true)
+      }
+      else {
+        setScrolled(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <div className="fixed top-0 z-50 w-screen bg-black px-4 md:px-8 py-4 flex items-center justify-between">
+    <div className={`fixed top-0 z-50 w-screen px-4 md:px-8 py-4 flex items-center justify-between transition-all duration-300`}>
+
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full bg-black z-[-1]"
+        initial={{ y: -100, opacity: 0 }}
+        animate={scrolled ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      />
 
       <div className="flex items-center gap-4">
         <img src={logo} alt="Logo Pinturas Gaggioni" className="h-12" />
-        <a href="/" className="text-3xl font-bold text-yellow-500 font-quicksand">
+        <a href="/" className="text-3xl font-bold font-inter text-yellow-500 max-[535px]:w-20">
           PINTURAS GAGGIONI
         </a>
       </div>
