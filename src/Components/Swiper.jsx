@@ -6,8 +6,6 @@ import img4 from '@/Images/img4.jpeg'
 import img6 from '@/Images/img6.jpeg'
 import img7 from '@/Images/img7.jpeg'
 import img8 from '@/Images/img8.jpeg'
-
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 
