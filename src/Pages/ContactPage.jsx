@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import image from "../Images/img4.jpeg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import emailjs from "@emailjs/browser"; 
 
 export default function ContactPage() {
   const [nombre, setNombre] = useState("");
@@ -11,6 +12,36 @@ export default function ContactPage() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+     setNombre("");
+     setEmail("");
+     setMensaje("");
+
+    const templateParams = {
+      nombre,
+      email,
+      mensaje,
+    };
+
+    emailjs
+      .send(
+        "service_co4mf2f",  
+        "template_qo1ym8b",  
+        templateParams,
+        "_ZNjolpch2zZwbvXL"    
+      )
+      .then(
+        (response) => {
+          alert("Correo enviado con éxito!");
+        },
+        (error) => {
+          alert("Error al enviar el correo, intente nuevamente.");
+          console.error(error);
+        }
+      );
+  };
 
   return (
     <div
@@ -24,7 +55,7 @@ export default function ContactPage() {
       >
         <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
           <h2 className="text-3xl font-bold mb-6 text-center">Pinturas Gaggioni</h2>
-          <form className="flex flex-col space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form className="flex flex-col space-y-4" onSubmit={sendEmail}>
             <div className="flex flex-col">
               <label className="text-gray-700 font-medium mb-1">Nombre *</label>
               <input
@@ -60,14 +91,12 @@ export default function ContactPage() {
               />
             </div>
 
-            <a
-              href={`https://mail.google.com/mail/?view=cm&fs=1&to=edpinturasgaggioni@gmail.com&su=Hola, soy ${encodeURIComponent(nombre)}&body=${encodeURIComponent(mensaje)}`}
+            <button
+              type="submit"
               className="bg-red-500 hover:bg-red-600 text-white font-medium py-2 rounded text-center transition"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Enviar
-            </a>
+            </button>
           </form>
         </div>
 
@@ -89,9 +118,7 @@ export default function ContactPage() {
             </a>
           </div>
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=edpinturasgaggioni@gmail.com&su=Consulta&body=Hola,%20quiero%20información"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:edpinturasgaggioni@gmail.com"
             className="text-gray-800 hover:text-white"
           >
             ✉️ Gmail: edpinturasgaggioni@gmail.com
