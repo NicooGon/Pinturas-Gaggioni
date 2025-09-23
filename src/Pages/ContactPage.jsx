@@ -2,12 +2,21 @@ import { useState, useEffect } from "react";
 import image from "../Images/img4.jpeg";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import emailjs from "@emailjs/browser"; 
+import emailjs from "@emailjs/browser";
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogCancel,
+} from "@/components/ui/alert-dialog";
 
 export default function ContactPage() {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [mensaje, setMensaje] = useState("");
+  const [isOpen, setIsOpen] = useState(false); 
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -15,26 +24,17 @@ export default function ContactPage() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-     setNombre("");
-     setEmail("");
-     setMensaje("");
 
-    const templateParams = {
-      nombre,
-      email,
-      mensaje,
-    };
+    const templateParams = { nombre, email, mensaje };
 
     emailjs
-      .send(
-        "service_co4mf2f",  
-        "template_qo1ym8b",  
-        templateParams,
-        "_ZNjolpch2zZwbvXL"    
-      )
+      .send("service_co4mf2f", "template_qo1ym8b", templateParams, "_ZNjolpch2zZwbvXL")
       .then(
-        (response) => {
-          alert("Correo enviado con éxito!");
+        () => {
+          setNombre("");
+          setEmail("");
+          setMensaje("");
+          setIsOpen(true); 
         },
         (error) => {
           alert("Error al enviar el correo, intente nuevamente.");
@@ -117,14 +117,23 @@ export default function ContactPage() {
               💬 +598 099-810-279
             </a>
           </div>
-          <a
-            href="mailto:edpinturasgaggioni@gmail.com"
-            className="text-gray-800 hover:text-white"
-          >
+          <a href="mailto:edpinturasgaggioni@gmail.com" className="text-gray-800 hover:text-white">
             ✉️ Gmail: edpinturasgaggioni@gmail.com
           </a>
         </div>
       </div>
+
+      <AlertDialog open={isOpen} onOpenChange={setIsOpen} className=''>
+        <AlertDialogContent className="bg-white p-6 rounded-lg shadow-lg mx-auto border-red-500">
+          <AlertDialogTitle className="text-lg font-bold">¡Correo enviado!</AlertDialogTitle>
+          <AlertDialogDescription>
+            Tu mensaje se envió correctamente. Nos pondremos en contacto contigo pronto.
+          </AlertDialogDescription>
+          <div className="flex justify-end mt-4 ">
+            <AlertDialogCancel onClick={() => setIsOpen(false)} className=" hover:bg-red-500">Cerrar</AlertDialogCancel>
+          </div>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
