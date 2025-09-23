@@ -27,7 +27,7 @@ export default function ServicePage() {
   return (
     <div
       id="servicios"
-      className="lg:min-h-[calc(90vh-80px)] bg-white flex flex-col items-center p-8 scroll-mt-54 sm:scroll-mt-54 md:scroll-mt-18 lg:scroll-mt-20"
+      className="lg:min-h-[calc(80vh-80px)] bg-white flex flex-col items-center p-8 scroll-mt-54 sm:scroll-mt-54 md:scroll-mt-18 lg:scroll-mt-20"
     >
       <div className="flex flex-col items-start w-full max-w-6xl" data-aos="fade-up">
         <div className="w-full sm:max-w-4xl mb-8">
