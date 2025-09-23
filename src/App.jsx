@@ -3,6 +3,7 @@ import ContactPage from './Pages/ContactPage'
 import ServicePage from './Pages/ServicePage'
 import CarouselPage from './Pages/CarouselPage';
 import SwiperImg from './Components/Swiper';
+import Gallery from './Components/Gallery';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className="bg-white pt-20">
         <CarouselPage/>
         <ServicePage />
+        <Gallery></Gallery>
         <ContactPage />
       </div>
     </div>

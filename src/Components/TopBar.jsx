@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../Images/LOGO1.PNG";
+import logo from "../Images/LOGO1.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function TopBar() {

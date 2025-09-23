@@ -63,7 +63,8 @@ export default function SwiperImg() {
                 </Swiper>
                 <div className='absolute hidden bottom-4 left-1/2 transform -translate-x-1/2 md:flex gap-6 z-20'>
                     {images.map((item, index) => (
-                        <button 
+                        <button
+                            key={index} 
                             onClick={() => swiperInstance.slideTo(index)} 
                             className='relative text-2xl w-12 flex items-center justify-center text-center text-white font-semibold font-inter cursor-pointer group'
                         >
