@@ -28,7 +28,7 @@ export default function ContactPage() {
     const templateParams = { nombre, email, mensaje };
 
     emailjs
-      .send("service_co4mf2f", "template_qo1ym8b", templateParams, "_ZNjolpch2zZwbvXL")
+      .send("service_ctvnqhi", "template_j0sh0dn", templateParams, "DLlmOEelGeMqhbXbi")
       .then(
         () => {
           setNombre("");
