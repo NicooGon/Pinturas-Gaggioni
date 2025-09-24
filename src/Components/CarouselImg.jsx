@@ -1,10 +1,8 @@
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
-import { FaTools, FaBrush, FaBuilding } from "react-icons/fa"
-import img1 from '@/Images/img1.jpeg'
+import { FaTools, FaBuilding, FaRoad, FaStar } from "react-icons/fa"
+import { RiTeamFill } from "react-icons/ri"
 import img2 from '@/Images/img2.jpeg'
-import img3 from '@/Images/img3.jpeg'
-import img4 from '@/Images/img4.jpeg'
 import img5 from '@/Images/img5.jpeg'
 import img6 from '@/Images/img6.jpeg'
 import img7 from '@/Images/img7.jpeg'
@@ -12,14 +10,11 @@ import img8 from '@/Images/img8.jpeg'
 
 export default function CarouselImg() {
   const items = [
-    { icon: <FaTools color="white" size={30} />, title: "Trabajos en la altura", description: "Mantenimiento y remodelaciones de lorem ipsun", pic: img1 },
-    { icon: <FaBrush color="white" size={30} />, title: "Proyectos en remodelacion", description: "Mantenimiento y remodelaciones de lorem ipsun", pic: img2 },
-    { icon: <FaBuilding color="white" size={30} />, title: "Sobre", description: "Mantenimiento y remodelaciones de lorem ipsun", pic: img3 },
-    { icon: <FaBrush color="white" size={30} />, title: "Llamadas", description: "Mantenimiento y remodelaciones de lorem ipsun", pic: img4 },
-    { icon: <FaBrush color="white" size={30} />, title: "Tramites", description: "Mantenimiento y remodelaciones de lorem ipsun", pic: img5 },
-    { icon: <FaBrush color="white" size={30} />, title: "Personal", description: "Mantenimiento y remodelaciones de lorem ipsun", pic: img6 },
-    { icon: <FaBrush color="white" size={30} />, title: "Nosotros", description: "Mantenimiento y remodelaciones de lorem ipsun", pic: img7 },
-    { icon: <FaBrush color="white" size={30} />, title: "Nosotros2", description: "Mantenimiento y remodelaciones de lorem ipsun", pic: img8 },
+    { icon: <FaTools color="white" size={30} />, title: "Proyectos de remodelación", description: "Transformamos tus espacios con calidad y estilo", pic: img2 },
+    { icon: <FaBuilding color="white" size={30} />, title: "Gestión de proyectos", description: "Acompañamiento en cada etapa para asegurar los mejores resultados", pic: img5 },
+    { icon: <FaRoad color="white" size={30} />, title: "Sobre nosotros", description: "Una empresa con trayectoria y compromiso en cada trabajo", pic: img7 },
+    { icon: <RiTeamFill color="white" size={30} />, title: "Equipo especializado", description: "Personal capacitado que garantiza eficiencia y confianza", pic: img6 },
+    { icon: <FaStar color="white" size={30} />, title: "Nuestra misión", description: "Ofrecer servicios de calidad que superen tus expectativas", pic: img8 }
   ]
 
   return (

@@ -16,10 +16,10 @@ export default function SwiperImg() {
     
 
     const images = [
-        { img: img4, text: "1" },
-        { img: img6, text: "2"},
-        { img: img7, text: "3"},
-        { img: img8, text: "4" }
+    { img: img4, text: "Transformamos espacios con calidad y confianza" },
+    { img: img6, text: "Soluciones integrales en pintura y revestimientos" },
+    { img: img7, text: "Más de 30 años de experiencia a tu servicio" },
+    { img: img8, text: "Compromiso con la excelencia en cada proyecto"}
     ]
 
     return(
@@ -51,7 +51,7 @@ export default function SwiperImg() {
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0 }}
                                         transition={{ duration: 0.9 }}
-                                        className="text-6xl z-10 text-center text-white font-montserrat font-bold"
+                                        className="text-xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl z-10 text-center text-white font-montserrat font-bold "
                                     >
                                         {item.text}
                                     </motion.div>

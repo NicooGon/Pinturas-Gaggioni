@@ -36,7 +36,7 @@ export default function ServicePage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-24 gap-x-16 justify-items-start">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-24 gap-x-8 justify-items-start">
         {services.map((s, i) => (
           <ServiceCard
             key={s.text}
